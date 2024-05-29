@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Blank Window</title>
+    <script>
+        function openBlankWindow() {
+            //let win = window.open("", "_blank", "width=800,height=600");
+            let win = window.open("", undefined, "width=800,height=600");
+            
+            const container = document.createElement("div");
+            win.document.body.appendChild(container);
+
+            console.log(container instanceof HTMLElement);
+        }
+    </script>
+</head>
+<body>
+    <h1>Open a Blank Window</h1>
+    <button onclick="openBlankWindow()">Open Blank Window 2</button>
+</body>
+</html>
